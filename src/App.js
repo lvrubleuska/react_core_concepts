@@ -1,26 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+let greetingCreateElement = React.createElement("div", null, "Hello World");
+let GreetingFunctionalComponent = () => <div>Hello World</div>;
+
+class GreetingComponent extends React.Component {
+  render() {
+    return <div>Hello World</div>;
+  }
 }
 
-export default App;
+class GreetingPureComponent extends React.PureComponent {
+  render() {
+    return <div>Hello World</div>;
+  }
+}
+
+export { greetingCreateElement, GreetingFunctionalComponent, GreetingComponent, GreetingPureComponent };
